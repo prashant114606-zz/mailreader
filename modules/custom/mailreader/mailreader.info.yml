@@ -1,0 +1,6 @@
+name: Mail Reader
+type: module
+description: Details about the mail thread
+package: custom
+configure: mailreader.settings
+core: 8.x

@@ -1,0 +1,7 @@
+mailreader.settings:
+  path: '/admin/config/services/mailreader'
+  defaults:
+    _form: '\Drupal\mailreader\Form\PassConfigForm'
+    _title: 'mailreader settings'
+  requirements:
+    _permission: 'administer mailreader settings'

@@ -1,0 +1,20 @@
+<?php
+use Drupal\mailreader\mailreaderServices;
+use Drupal\node\Entity\Node;
+
+/**
+ * @param Node $node
+ */
+function mailreader_node_insert(Node $node) {
+  if ($node->getType() == 'article') {
+    $gmail = new mailreaderServices();
+    $client = $gmail->getClient();
+    $service = new Google_Service_Gmail($client);
+//    $message = $gmail->getMessage($service, 'prashant.kumar@qed42.com', '16a11d297029e0b0');
+    $message = $gmail->getMessage($service, 'prashant.kumar@qed42.com', '16a216a546c27ab5');
+    $node->set('body', $message);
+    $node->save();
+//    print_r($message);
+//    die();
+  }
+}

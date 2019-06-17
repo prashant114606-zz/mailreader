@@ -1,0 +1,5 @@
+mailreader.settings:
+  title: Mail Reader
+  description: 'Configure to add the email id.'
+  route_name: mailreader.settings
+  parent: system.admin_config_services

@@ -1,0 +1,4 @@
+services:
+  mailreader.Mailreader_service:
+    class: Drupal\mailreader\MailreaderService
+    arguments: ['@http_client']
